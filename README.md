@@ -19,13 +19,13 @@ Cosa fare?
     | Serranda
   + 6:45:
     | Porta (il prigioniero fa colazione)
-  + 7:00
+  + 7:00:
     | La colazione scompare
-  + 10:00
+  + 10:00:
     | Porta (Il prigioniero esce)
-  + 13:00
+  + 13:00:
     | Porta (Il prigioniero rientra)
-  + 14:00
+  + 14:00:
     | Porta (Il prigioniero pranza)
   
 - Eventi ciclici:
