@@ -2,36 +2,47 @@
 Verifica arduino
 
 Cosa fare?
-- Sensori:
-  + Fumo (incendio)
-  + Suono
-  + Movimento
 - Allarmi:
   + Sirena
-  + Luci Led
+  + Luce Led
 - Ambiente:
-  + Serrande
-  + Luci
+  + Spruzzino
+  + Serranda
+  + Luce
   + Porta
 - Comportamento:
   + 6:30:
-    | Sveglia
     | Serranda
   + 6:45:
-    | Porta (il prigioniero fa colazione)
+    | Porta (Apre)
   + 7:00:
-    | La colazione scompare
+    |  Porta (Chiude)
   + 10:00:
-    | Porta (Il prigioniero esce)
+    | Porta (Apre)
+    | Luce (Accende)
+  + 10:30:
+    | Porta (Chiude)
+    | Serranda (Chiude)
   + 13:00:
-    | Porta (Il prigioniero rientra)
-  + 14:00:
-    | Porta (Il prigioniero pranza)
+    | Luce (Spegne)
+
   
 - Eventi ciclici:
   + Prigioniero cerca di scappare
     | Ogni 2 giorni
+    | 6:00:
+      - Allarme (Accende)
+      - Led (Accende)
+    | 6:30:
+      - Allarme (Spegne)
+      - Led (Spegne)
+    
   + Incendio
     | Ogni 5 giorni
-  + Lettera
-    | Ogni mattina
+    | 12:30:
+      - Spruzzino (Accende)
+      - Allarme (Accende)
+    | 13:00:
+      - Spruzzino (Spegne)
+      - Allarme (Spegne)
+
